@@ -1,0 +1,94 @@
+* { /*Reset CSS*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg: #f5f7fb;
+    --card: #ffffff;
+    --text: #1f2937;
+    --accent: #1fb6b6;
+    --accent-ink: #ffffff;
+    --shadow: 0 10px 25px rgba(0,0,0,0.08);
+    --radius-lg: 18px;
+    --radius-md: 12px;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+}
+
+button{
+    background: var(--accent);
+    color: var(--accent-ink);
+    padding: 5px 7px;
+    border-radius: 7px;
+    box-shadow: 0 8px 18px rgba(31,182,182,0.35);
+}
+
+/*Contenedor principal*/
+.card{
+    width: 80%;
+    background: var(--card);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow);
+    padding: clamp(18px, 3vw, 28px);
+}
+
+/*Título de la página*/
+.siteTitle{
+    margin: 6px 0 18px 18px;
+    text-align: center;
+    letter-spacing: .4px;
+    font-size: 4rem;
+}
+
+.hero{
+    margin: 0 0;
+}
+
+.hero img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-md);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.buttonAction{
+    text-decoration: none;
+    background: var(--accent);
+    padding: 5px 7px;
+    border-radius: 7px;
+    border: 2px solid #000;
+    color: var(--accent-ink);
+    box-shadow: 0 8px 18px rgba(31,182,182,0.35);
+    transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+}
+
+.buttonAction:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 12px 26px rgba(31,182,182,0.35);
+}
+
+.buttonAction:focus{
+    outline: 3px solid #99f6f4;
+    outline-offset: 2px;
+}
+
+@media(prefers-reduced-motion: reduce){
+    .buttonAction{
+        transition: none;
+    }
+}

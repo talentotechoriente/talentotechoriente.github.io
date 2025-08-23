@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.titulo{
+    background-image: url("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXMycnhpbTNwMTBkMnMxaDhqZGZmNjRpbXUydHJkZTZwMHQzOWJlaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SpopD7IQN2gK3qN4jS/giphy.gif");
+    height: 100vh;
+    /*background-repeat: repeat-x;*/
+    /*background-repeat: repeat-y;*/
+    background-repeat: no-repeat;
+    /*background-position: center right;*/
+    background-size: cover;
+}
