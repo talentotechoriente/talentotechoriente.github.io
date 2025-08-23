@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cursos – Índice</title>
+  <meta name="description" content="Índice de cursos del repositorio" />
+  <style>
+    :root{
+      --bg: #0b0c0f; --fg:#e8eef6; --muted:#98a2b3; --card:#11141a; --accent:#7c9cff; --ring:#c4d1ff;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7f8fb; --fg:#0b0c0f; --muted:#475467; --card:#ffffff; --accent:#3451ff; --ring:#8aa2ff; }
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; background:var(--bg); color:var(--fg);}
+    header{max-width:1100px; margin:40px auto 10px; padding:0 20px;}
+    h1{font-size:clamp(1.6rem,2vw+1rem,2.2rem); margin:0 0 8px}
+    p.lead{margin:.25rem 0 1.5rem; color:var(--muted)}
+    .grid{max-width:1100px; margin:0 auto 60px; padding:0 20px; display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fill,minmax(240px,1fr));}
+    .card{display:block; background:var(--card); border:1px solid rgba(255,255,255,.06);
+      border-radius:16px; padding:18px; text-decoration:none; color:inherit; transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
+    .card:focus,.card:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.18); border-color:var(--ring); outline:none}
+    .tag{display:inline-flex; align-items:center; gap:6px; font-size:.75rem; color:var(--accent); background:rgba(124,156,255,.12); padding:4px 8px; border-radius:999px; margin-bottom:10px}
+    .title{font-size:1.05rem; font-weight:700; margin:0 0 6px}
+    .desc{margin:0; color:var(--muted); font-size:.92rem; line-height:1.35}
+    .path{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.78rem; color:var(--muted); margin-top:10px; opacity:.9}
+    footer{max-width:1100px; margin:0 auto 40px; padding:0 20px; color:var(--muted); font-size:.9rem}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Índice de cursos</h1>
+    <p class="lead">Selecciona un curso para ingresar a su carpeta. (Puedes añadir más tarjetas cuando crees nuevas carpetas.)</p>
+  </header>
+
+  <main class="grid" aria-label="Lista de cursos">
+    <!--
+      IMPORTANTE:
+      - Cambia los href a los nombres REALES de tus carpetas.
+      - Si el nombre de la carpeta tiene espacios, evita usarlos o usa %20 en el enlace.
+      - Cada carpeta debería tener su propio index.html para que GitHub Pages u otro hosting la sirva.
+    -->
+
+    <!-- Curso 1: Programación Web -->
+    <a class="card" href="./programacionweb.html" aria-label="Abrir carpeta programacion-web">
+      <span class="tag" aria-hidden="true">Curso</span>
+      <h2 class="title">Programación Web</h2>
+      <p class="desc">Material, guías y prácticas del curso de Programación Web.</p>
+      <div class="path">./programacionweb.html</div>
+    </a>
+
+    <!-- Curso 2: (Ejemplo) Diseño UX -->
+    <a class="card" href="./diseno-ux/" aria-label="Abrir carpeta diseno-ux">
+      <span class="tag" aria-hidden="true">Curso</span>
+      <h2 class="title">Diseño UX</h2>
+      <p class="desc">Recursos y entregables del curso de Diseño de Experiencia de Usuario.</p>
+      <div class="path">./diseno-ux/</div>
+    </a>
+
+    <!-- Copia/pega más tarjetas como esta para nuevos cursos:
+    <a class="card" href="./nombre-de-tu-carpeta/">
+      <span class="tag">Curso</span>
+      <h2 class="title">Nombre del Curso</h2>
+      <p class="desc">Breve descripción del contenido del curso.</p>
+      <div class="path">./nombre-de-tu-carpeta/</div>
+    </a>
+    -->
+  </main>
+
+  <footer>
+    Sugerencia: evita espacios/acentos en nombres de carpetas (usa <code>programacion-web</code>, no <code>programación web</code>).  
+    Si usas GitHub Pages, coloca un <code>index.html</code> dentro de cada carpeta.
+  </footer>
+</body>
+</html>

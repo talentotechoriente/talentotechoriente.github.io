@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programación Web – Índice de lecciones</title>
+  <meta name="description" content="Índice de lecciones del curso Programación Web" />
+  <style>
+    :root{
+      --bg:#0b0c0f; --fg:#e8eef6; --muted:#98a2b3; --card:#11141a; --accent:#7c9cff; --ring:#c4d1ff;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#f7f8fb; --fg:#0b0c0f; --muted:#475467; --card:#ffffff; --accent:#3451ff; --ring:#8aa2ff; }
+    }
+    *{box-sizing:border-box}
+    body{margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; background:var(--bg); color:var(--fg);}
+    header, footer{max-width:1100px; margin:40px auto 10px; padding:0 20px;}
+    nav.breadcrumb{font-size:.93rem; margin:16px 0 6px}
+    nav.breadcrumb a{color:var(--accent); text-decoration:none}
+    nav.breadcrumb a:hover{text-decoration:underline}
+    h1{font-size:clamp(1.6rem,2vw+1rem,2.2rem); margin:6px 0 8px}
+    p.lead{margin:.25rem 0 1.5rem; color:var(--muted)}
+    .grid{max-width:1100px; margin:0 auto 60px; padding:0 20px; display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fill,minmax(260px,1fr));}
+    .card{display:block; background:var(--card); border:1px solid rgba(255,255,255,.06);
+      border-radius:16px; padding:18px; text-decoration:none; color:inherit; transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease}
+    .card:focus,.card:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.18); border-color:var(--ring); outline:none}
+    .tag{display:inline-flex; align-items:center; gap:6px; font-size:.75rem; color:var(--accent); background:rgba(124,156,255,.12); padding:4px 8px; border-radius:999px; margin-bottom:10px}
+    .title{font-size:1.05rem; font-weight:700; margin:0 0 6px}
+    .desc{margin:0; color:var(--muted); font-size:.92rem; line-height:1.35}
+    .path{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; font-size:.78rem; color:var(--muted); margin-top:10px; opacity:.9}
+    footer{color:var(--muted); font-size:.9rem}
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="../">« Volver al índice de cursos</a>
+    </nav>
+    <h1>Programación Web</h1>
+    <p class="lead">Selecciona una lección para ingresar a su carpeta.</p>
+  </header>
+
+  <main class="grid" aria-label="Lista de lecciones">
+    <!-- Importante:
+      - Estos href usan %20 para espacios y %C3%B3 / %C3%A1 para acentos,
+        así evitas problemas en algunos servidores.
+      - Si renombraras las carpetas con “slugs” (sin espacios/acentos),
+        solo cambia los href.
+    -->
+
+    <a class="card" href="./Lecci%C3%B3n%2001%20Conceptos%20B%C3%A1sicos%20de%20HTML/" aria-label="Abrir Lección 01 Conceptos Básicos de HTML">
+      <span class="tag" aria-hidden="true">Lección</span>
+      <h2 class="title">Lección 01: Conceptos Básicos de HTML</h2>
+      <p class="desc">Estructura del documento, etiquetas, atributos y buenas prácticas.</p>
+      <div class="path">./Lección 01 Conceptos Básicos de HTML/</div>
+    </a>
+
+    <a class="card" href="./Lecci%C3%B3n%2002%20Conceptos%20B%C3%A1sicos%20de%20CSS/" aria-label="Abrir Lección 02 Conceptos Básicos de CSS">
+      <span class="tag" aria-hidden="true">Lección</span>
+      <h2 class="title">Lección 02: Conceptos Básicos de CSS</h2>
+      <p class="desc">Selectores, propiedades, caja, y organización del estilo.</p>
+      <div class="path">./Lección 02 Conceptos Básicos de CSS/</div>
+    </a>
+
+    <!-- Alternativa si usas “slugs”:
+    <a class="card" href="./leccion-01-conceptos-basicos-de-html/">
+      ...
+      <div class="path">./leccion-01-conceptos-basicos-de-html/</div>
+    </a>
+    <a class="card" href="./leccion-02-conceptos-basicos-de-css/">
+      ...
+      <div class="path">./leccion-02-conceptos-basicos-de-css/</div>
+    </a>
+    -->
+  </main>
+
+  <footer>
+    Sugerencia: en repositorios y servidores estáticos suele ser más robusto usar nombres de carpetas sin espacios ni acentos (ej.: <code>leccion-01-conceptos-basicos-de-html</code>).
+    Si mantienes los nombres con espacios/acentos, deja los href como están (con codificación %).
+  </footer>
+</body>
+</html>
