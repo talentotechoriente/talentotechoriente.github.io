@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campos de Formulario</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="name">Nombre: </label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+        <label for="email">Correo electrónico: </label>
+        <input type="email" name="email" id="email" required>
+        <br><br>
+        <label for="password">Contraseña: </label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+<!-- Botones de opción -->
+ <label for="gender">Género: </label>
+ <input type="radio" name="gender" id="male"> Masculino
+ <input type="radio" name="gender" id="female"> Femenino
+
+ <br><br>
+<!-- Casillas de verificación -->
+<label for="suscribe">Suscribirse: </label>
+<input type="checkbox" name="suscribe" id="suscribe"> Sí, deseo suscribirme al boletín informativo. 
+<br><br>
+
+<!-- Listas desplegables -->
+<label for="productos"> Productos: </label> 
+<select name="productos" id="productos">
+    <option value="galletas">Galletas</option>
+    <option value="gaseosa">Gaseosa</option>
+    <option value="pasteles">Pasteles</option>
+    <option value="agua">Agua</option>
+</select>
+ 
+</body>
+</html>

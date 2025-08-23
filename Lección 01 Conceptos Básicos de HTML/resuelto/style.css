@@ -1,0 +1,88 @@
+:root{
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --accent: #1fb6b6; /* turquesa del botón */
+  --accent-ink: #ffffff;
+  --shadow: 0 10px 25px rgba(0,0,0,.08);
+  --radius-lg: 18px;
+  --radius-md: 12px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+/* Contenedor principal */
+.card{
+  width: min(940px, 92vw);
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: clamp(18px, 3vw, 28px);
+}
+
+/* Título */
+.site-title{
+  margin: 6px 0 18px;
+  text-align: center;
+  font-size: clamp(1.4rem, 2.5vw + .6rem, 2.2rem);
+  letter-spacing: .4px;
+}
+
+/* Imagen central */
+.hero{
+  margin: 0;
+}
+
+.hero img{
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 14px rgba(0,0,0,.06);
+}
+
+/* Botón flotante */
+.btn-cta{
+  position: fixed;
+  right: clamp(16px, 4vw, 28px);
+  bottom: clamp(16px, 4vw, 28px);
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(31,182,182,.35);
+  transition: transform .14s ease, box-shadow .14s ease, background .14s ease;
+}
+
+.btn-cta:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(31,182,182,.45);
+}
+
+.btn-cta:focus{
+  outline: 3px solid #99f6f4;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .btn-cta{ transition: none; }
+}
