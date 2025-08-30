@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="paginas">
+                <a class="tituloPagina" href="../index.html">Mi Tiendita</a>
+                <ul class="listaPaginas">
+                    <li>
+                        <a class="paginaEnlace"href="../pages/productos.html">Productos</a>
+                    </li>
+                    <li >
+                        <a class="paginaEnlace"href="../pages/contacto.html">Contacto</a>
+                    </li>
+                    <li >
+                        <a class="paginaEnlace" href="../pages/carrito.html">Carrito</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedorPrincipal">
+        <h5>Contáctanos</h5>
+        <p>Si tienes alguna consulta, no dudes en enviarnos un mensaje mediante el siguiente formulario:</p>
+        <form id="formularioContacto" class="formulario">
+            <div class="espacioFormulario">
+                <label for="name" class="formularioEtiqueta">Nombre: </label>
+                <input type="text" name="name" id="name" class="formularioDato" required>
+            </div>
+            <div class="espacioFormulario">
+                <label for="email" class="formularioEtiqueta">Correo Electrónico: </label>
+                <input type="email" name="email" id="email" class="formularioDato" required>
+            </div>
+            <div class="espacioFormulario">
+                <label for="message" class="formularioEtiqueta">Mensaje: </label>
+                <textarea name="message" id="message" rows="5" class="formularioDato" required></textarea>
+            </div>
+            <button type="submit" class="btn btnPrimary">Enviar</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Mi Tiendita - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

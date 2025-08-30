@@ -1,0 +1,280 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Comentario*/
+h1{
+    font-size: 3em;
+}
+h2{
+    font-size: 2.5em;
+}
+h3{
+    font-size: 2em;
+}
+h4{
+    font-size: 1.8em;
+}
+h5{
+    font-size: 1.5em;
+}
+h6{
+    font-size: 1.2em;
+}
+header{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #212529;
+    background-color: #f8f9fa;
+    position: sticky;
+}
+
+nav{
+    padding: 1% 10% 1% 10%;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 64px;
+}
+
+.textoFinal{
+    text-align: right;
+}
+
+.tituloPagina{
+    text-decoration: none;
+}
+
+.paginas{
+    display: flex;
+    gap: 100px;
+}
+
+.listaPaginas{
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0 0 0 auto;
+    padding: 0;
+}
+
+.paginaEnlace{
+    font-weight: 600;
+    color: #212529;
+    text-decoration: none;
+}
+
+.contenedorPrincipal{
+    padding: 0 10%;
+}
+
+.hero{
+    position: relative;
+    overflow: hidden;
+    color: #f8f9fa;
+    background: #111111;
+    height: 75vh;
+    background-image: url("https://imagenes.eltiempo.com/files/image_1200_535/uploads/2019/12/07/5dec47012d257.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero::after{
+    content: "";
+    position: absolute;
+    background: linear-gradient(90deg, rgba(138, 48, 48, 0.75), rgba(0, 0, 0, 0.25));
+}
+
+.heroInner{
+    position: relative;
+    z-index: 1;
+    padding: 10%;
+    text-align: center;
+}
+
+/*Botones*/
+.btn{
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.05s ease, backgroud .2s ease, border-color .2s ease;
+    user-select:none;
+}
+
+.btn:active{ transform: translateY(1px);}
+
+.btnPrimary{
+    background: #f8f9fa;
+}
+
+.btnPrimary:hover{
+    background: #262626;
+    border-color: #f8f9fa;
+    color: #ffffff;
+}
+
+.btnCarrito:hover{
+    background: #13633d;
+    color: #ffffff;
+    border: 1px solid #dfe0e2;
+}
+
+.btnLg{
+    padding: 14px 20px;
+    font-size: 1.1rem;
+}
+
+.btnFinalizar{
+    background: #339933;
+    color: #ffffff;
+    border-color: #111111;
+}
+
+.btnFinalizar:hover{
+    filter: brightness(0.70);
+}
+
+/*Contenedor Productos*/
+.contenedorProductosDestacados{
+    margin-top: 2rem;
+}
+
+.contenedorProductos{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+@media (min-width:768px){
+    .contenedorProductos{
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/*Producto*/
+.tarjeta{
+    background: #33993344;
+    border: 1px solid #212529;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: #dfe0e2;
+}
+
+.imagenTarjeta{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.cuerpoTarjeta{
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.tituloTarjeta{
+    margin: 0;
+    font-weight: 700;
+    color: #13633d;
+}
+
+.precioTarjeta{
+    margin: 0;
+    font-weight: 700;
+}
+/*Pie de página*/
+.footer{
+    background: #111827;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 16px;
+    margin-top: 40px;
+    font-size: .95rem;
+}
+
+/*Formulario*/
+.formulario{
+    max-width: 640px;
+    padding-top: 3%;
+}
+
+.espacioFormulario{
+    margin-bottom: 14px;
+}
+
+.formularioEtiqueta{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 400;
+}
+
+.formularioDato{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #ffffff;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+    font: inherit;
+}
+
+.formularioDato:focus{
+    border-color: #339933;
+    box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.15);
+}
+
+textarea.formularioDato{
+    resize: vertical;
+}
+
+.contenedorTabla{
+    width: 100%;
+    overflow-x: auto;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    box-shadow: #262626;
+}
+
+.tabla{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 680px;
+}
+
+.tabla th, .tabla td{
+    padding: 12px 14px;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.tabla thead th{
+    background: #f3f4f6;
+    text-align: left;
+    font-weight: 700;
+}
+
+.tabla tbody tr:hover{
+    background: #fafafa;
+}
+
+.mensajeVacio{
+    text-align: center;
+    margin: 40px 0;
+    color: #339933;
+    font-weight: 600;
+}
+
+.totales{
+    margin-top: 12px;
+}
+

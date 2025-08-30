@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="paginas">
+                <a class="tituloPagina" href="../index.html">Mi Tiendita</a>
+                <ul class="listaPaginas">
+                    <li>
+                        <a class="paginaEnlace"href="../pages/productos.html">Productos</a>
+                    </li>
+                    <li >
+                        <a class="paginaEnlace"href="../pages/contacto.html">Contacto</a>
+                    </li>
+                    <li >
+                        <a class="paginaEnlace" href="../pages/carrito.html">Carrito</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="contenedorPrincipal">
+        <h5>Tu Carrito de Compras</h5>
+        <div class="contenedorTabla">
+            <table class="tabla">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th class="textoFinal">Precio</th>
+                        <th class="textoFinal">Cantidad</th>
+                        <th class="textoFinal">SubTotal</th>
+                        <th aria-label="Acciones"></th>
+                    </tr>
+                </thead>
+                <tbody id="carritoItems">
+                    <!-- El JavaScript del Carrito -->
+                </tbody>
+            </table>
+        </div>
+        <div class="totales textoFinal">
+            <strong>Total: $<span id="totalPrecioCarrito">0</span></strong>
+        </div>
+        <div class="acciones textoFinal">
+            <button id="finalizarPedido" class="btn btnFinalizar">Finalizar Compra</button>
+        </div>
+        <p id="mensajeCarritoVacio" class="mensajeVacio">El carrito está vacío.</p>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Mi Tiendita - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
